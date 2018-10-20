@@ -85,7 +85,9 @@ else
 
   ## gcc optimization flags
   ## (-ffast-math) disables strict IEEE or ISO rules/specifications for math funcs
-  OPTON = -O3 -ffast-math
+  # OPTON = -O3 -ffast-math
+  OPTON = -O2
+  # taking off some optimizations, re Brendan Gregg - Compilers love Messing with Benchmarks
 
   ## OS detection.  Comment out if gmake syntax not supported by other 'make'. 
   OSNAME:=$(shell uname -s)
